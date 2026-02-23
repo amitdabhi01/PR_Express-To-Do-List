@@ -30,7 +30,7 @@ app.get("/taskList", (req, res) => {
 
 // now getting data using specific id
 
-app.get("", (req, res) => {
+app.get("/taskList/:id", (req, res) => {
   const id = Number(req.params.id);
 
   const task = taskList.find((t) => t.id === id);
@@ -41,6 +41,88 @@ app.get("", (req, res) => {
   res.status(200).json(task);
 });
 
+// adding task to task list
+
+app.post("/addTask", (req, res) => {
+  const { task, description } = req.body;
+
+  if (!task || !description) {
+    return res.status(500).json("task and description field are required");
+  }
+
+  const newTask = {
+    id: new Date().getTime(),
+    task,
+    description,
+  };
+
+  taskList.push(newTask);
+
+  res.status(201).json({ message: "task added successfully", newTask });
+});
+
+// editing partial data of task list using patch method
+
+app.patch("/updateTask/:id", (req, res) => {
+  const id = Number(req.params.id);
+
+  const updateTask = taskList.find((t) => t.id === id);
+
+  if (!updateTask) {
+    return res.status(404).json("task data with this id not found");
+  }
+
+  const { task, description } = req.body;
+
+  if (task) {
+    updateTask.task = task;
+  }
+
+  if (description) {
+    updateTask.description = description;
+  }
+
+  res.status(200).json({ message: "task updated successfully", updateTask });
+});
+
+// deleting task from task list
+
+app.delete("/deleteTask/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const index = taskList.findIndex((t) => t.id === id);
+
+  if (index === -1) {
+    return res.status(404);
+  }
+
+  taskList.splice(index, 1);
+
+  res.status(200).json({ message: "task deleted successfully" });
+});
+
+// updeting whole data of task list using put method
+
+app.put("/updateWholeTask/:id", (req, res) => {
+  const id = Number(req.params, id);
+
+  const index = taskList.findIndex((t) => t.id === id);
+
+  if (index === -1) {
+    return res
+      .status(404)
+      .json({ message: "task data with this id not found" });
+  }
+
+  const { task, description } = req.body;
+
+  res
+    .status(200)
+    .json({
+      message: "task updated successfully",
+      updateTask: { id, task, description },
+    });
+});
 
 app.get("/", (req, res) => {
   res.status(200).json("Hello From Server");
