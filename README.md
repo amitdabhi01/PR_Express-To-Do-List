@@ -50,35 +50,43 @@ Express-Todo/<br>
 
 **Home Route**  
 
-<img width="1902" height="954" alt="Screenshot 2026-02-23 151006" src="https://github.com/user-attachments/assets/59afb24f-7180-4481-9c1f-28a8ed85e9c8" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104706" src="https://github.com/user-attachments/assets/cc8aaac6-e4c1-4c6e-9cac-25a9960d580f" />
+
 
 **Undefined Route Handling** 
 
-<img width="1915" height="911" alt="Screenshot 2026-02-23 151431" src="https://github.com/user-attachments/assets/124f3175-a644-4adf-b9ac-4f3a1748d223" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104712" src="https://github.com/user-attachments/assets/e42753ba-2b97-4b1a-892f-e4d813977c72" />
+
 
 **Get All Todos**  
 
-<img width="1919" height="910" alt="Screenshot 2026-02-23 151458" src="https://github.com/user-attachments/assets/07fa3d31-26fb-4403-b819-b72e3af6e7e4" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104717" src="https://github.com/user-attachments/assets/5639c5a0-a305-4978-8c14-2e9d23eb9646" />
+
 
 **Get Todo by ID**
 
-<img width="1919" height="922" alt="Screenshot 2026-02-23 151529" src="https://github.com/user-attachments/assets/561b2dc0-4760-46b4-b8d0-de90211d0563" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104723" src="https://github.com/user-attachments/assets/a9278fb1-a434-45b9-8b58-6b360ba2e7fc" />
+
 
 **Create Todo** 
 
-<img width="1913" height="907" alt="Screenshot 2026-02-23 151555" src="https://github.com/user-attachments/assets/6ff3a2e0-2caa-408d-abed-2936be61d40a" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104728" src="https://github.com/user-attachments/assets/4a37a9d6-76b6-4d30-9846-0a372872efbd" />
+
 
 **Update Todo (PATCH)** 
 
-<!-- <img src="screenshots/update-todo-patch.png" alt="Update Todo PATCH" width="700" /> -->
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104733" src="https://github.com/user-attachments/assets/bab49f83-a742-4d7b-bd98-8852ac7ba2d9" />
+
 
 **Update Todo (PUT)** 
 
-<img width="1919" height="918" alt="Screenshot 2026-02-23 151806" src="https://github.com/user-attachments/assets/d0aad277-dfc1-4445-bc61-239c4ef7a570" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104743" src="https://github.com/user-attachments/assets/8139db9f-cde2-4e4e-b964-c085a5beb6e9" />
+
 
 **Delete Todo**  
 
-<img width="1909" height="941" alt="Screenshot 2026-02-23 151619" src="https://github.com/user-attachments/assets/49015858-6900-45a0-a7d5-bf98d519512c" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-24 104738" src="https://github.com/user-attachments/assets/3845d51b-6dbf-4ea4-91b2-7c863335240d" />
+
 
 ---
 
@@ -142,5 +150,6 @@ Body (JSON):
 }
 
 ❌ Delete Todo
+
 
 DELETE /deleteTask/:id
