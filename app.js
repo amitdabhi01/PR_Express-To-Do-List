@@ -101,10 +101,10 @@ app.delete("/deleteTask/:id", (req, res) => {
   res.status(200).json({ message: "task deleted successfully" });
 });
 
-// updeting whole data of task list using put method
+// updating whole data of task list using put method
 
 app.put("/updateWholeTask/:id", (req, res) => {
-  const id = Number(req.params, id);
+  const id = Number(req.params.id);
 
   const index = taskList.findIndex((t) => t.id === id);
 
